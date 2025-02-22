@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Başarıyla Doğrulandın! ✅</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            margin: 0;
+        }
+        .container {
+            background: #1b1b1b;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+            max-width: 400px;
+            transition: transform 0.3s;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        img {
+            border-radius: 50%;
+            width: 110px;
+            height: 110px;
+            margin-bottom: 15px;
+            border: 3px solid #5865F2;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        .button {
+            background: linear-gradient(135deg, #5865F2, #4752C4);
+            color: white;
+            padding: 12px 18px;
+            text-decoration: none;
+            border-radius: 6px;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background: linear-gradient(135deg, #4752C4, #3b43a3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+        <h1 id="username">Başarıyla Doğrulandın! ✅</h1>
+        <p>Artık sunucuda tüm yetkilerine erişebilirsin. 🎉</p>
+        <a href="https://discord.com/channels/@me" class="button">Discord'a Dön</a>
+    </div>
+
+    <script>
+        // URL'den kullanıcı bilgilerini al
+        const params = new URLSearchParams(window.location.search);
+        const username = params.get("username");
+        const avatarURL = params.get("avatarURL");
+
+        if (username) {
+            document.getElementById("username").innerText = `✅ Hoşgeldin, ${username}!`;
+        }
+
+        if (avatarURL) {
+            document.getElementById("avatar").src = avatarURL;
+        }
+    </script>
+</body>
+</html>

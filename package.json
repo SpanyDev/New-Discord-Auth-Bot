@@ -1,0 +1,20 @@
+{
+  "name": "guild-manager",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "start": "./bot.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.10.1",
+    "node-fetch": "^3.3.2",
+    "path": "^0.12.7",
+  }
+}
